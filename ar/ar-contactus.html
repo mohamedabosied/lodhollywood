@@ -1,0 +1,251 @@
+<!-- <?php
+
+// Check if user coming from a request
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    // Assign Variables
+    $user = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $cellphone = filter_var($_POST['cellphone'], FILTER_SANITIZE_NUMBER_INT);
+    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+
+    // echo $user . '<br>';
+    // echo $email . '<br>';
+    // echo $cellphone . '<br>';
+    // echo $subject . '<br>';
+    // echo $message . '<br>';
+
+    // Creating Array of Errors
+    $formErrors = array();
+    if (strlen($user) <= 3) {
+        $formErrors[] = 'Your Name Must be Larger Than 3 Characters!';
+    }
+    if (strlen($message) < 10) {
+        $formErrors[] = 'Your Message Must be Larger Than 10 Characters!';
+    }
+
+    // If no Errors Send the Email [mail(To, Subject, Message, Header, Parameters)]
+    $headers = 'From: ' . $email . '\r\n';
+    $myEmail = 'lodhollywoodco@gmail.com';
+    $subject = 'Debt Collection';
+    if (empty($formErrors)) {
+        mail($myEmail, $subject, $message, $headers);
+
+        $user = '';
+        $email = '';
+        $cellphone = '';
+        $message = '';
+
+        $success = '<div class="alert alert-success"> The Message is Successfully Sent! </div';
+    }
+}
+
+?> -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lod Hollywood | تواصل معنا</title>
+    <meta name="description"
+        content="Debt collection agency in Egypt. Years expereince.LodHollywood provides debt collection in Egypt - International debt recovery &amp; business investigations." />
+    <link rel="canonical" href="https://lodhollywood.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Contact Us - LodHollywood" />
+    <meta property="og:description"
+        content="Debt collection agency in Egypt. Years expereince.LodHollywood provides debt collection in Egypt - International debt recovery &amp; business investigations." />
+    <meta property="og:url" content="https://lodhollywood.com/" />
+    <meta property="og:site_name" content="LodHollywood" />
+    <meta property="article:modified_time" content="2021-06-05T15:24:03+00:00" />
+    <meta property="og:image"
+        content="https://lodhollywood.com/wp-content/uploads/2021/01/loodholly-removebg-preview.png" />
+    <meta property="og:image:width" content="263" />
+    <meta property="og:image:height" content="263" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:label1" content="Est. reading time" />
+    <meta name="twitter:data1" content="5 minutes" />
+
+    <!-- Css Files -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+    <style>
+        html,
+        body,
+        * {
+            direction: rtl !important;
+        }
+    
+        .dropdown-item {
+            text-align: right !important;
+            direction: rtl !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+        <div class="container">
+            <!-- <img src="images/logo.png" alt="Lod Hollywood Logo" width="50px"> -->
+            <a href="ar-index.html" class="navbar-brand">Lod Hollywood</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="ar-index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ar-aboutus.html">معلومات عنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ar-services.html">خدمتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ar-blog.html">المدونة</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="ar-contactus.html">تواصل معنا <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-language"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="../index.html"><img src="../images/united-states.png" alt=""> English</a>
+                            <a class="dropdown-item" href="ar-index.html"><img src="../images/egypt.png" alt=""> عربية</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+
+    <div class="contact-showcase">
+            <div class="container">
+                <h1 class="text-center display-2">تواصل معنا</h1>
+                <div class="heading-line-1"></div>
+                <div class="heading-line-2"></div>
+                
+                <p class="lead text-center mt-5">
+شكرا لكم لزيارة موقعنا على شبكة الإنترنت.
+يرجى الاتصال بنا للاستفسار عن استرداد الديون وذكاء الأعمال في مصر والعالم.
+                </p>
+            </div>
+    </div>
+
+
+  <!-- Start Contact -->
+    <div class="contact">
+        <div class="container">
+            <!-- <?php
+            if(isset($formErrors)) { ?>
+            <div class="errors text-center alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <?php
+                    foreach($formErrors as $error) {
+                        echo $error . '<br>';
+                    }
+                    ?>
+            </div>
+            <?php } ?>
+
+            <?php if (isset($success)) { echo $success; }; ?> -->
+            <div class="row inner">
+                <div class="col-md-8 col-12">
+                    <form>
+                        <input 
+                            type="text" 
+                            name="username" 
+                            class="form-control" 
+                            placeholder="الاسم...">
+                        <input 
+                            type="email" 
+                            name="email" 
+                            class="form-control" 
+                            placeholder="الايميل...">
+                        <input 
+                            type="text" 
+                            name="cellphone" 
+                            class="form-control" 
+                            placeholder="رقم الموبايل...">
+                        <textarea 
+                            name="message" 
+                            cols="30" 
+                            rows="10" 
+                            class="form-control" 
+                            placeholder="الرسالة: "
+                            ></textarea>
+                        <input type="submit" class="form-control lead" value="ارسل الرسالة">
+                    </form>
+                </div>
+                <div class="col-md-4 col-12">
+                <h1 class="text-center"><img src="images/call.png" alt="" width="50px"></h1>
+                <p class="lead text-center">(+2) 01277889929</p>
+                <p class="lead text-center">(+2) 01062448217</p>
+                <p class="lead text-center">(+2) 0233478022</p>
+                <p class="lead text-center">الايميل: lodhollywoodco@gmail.com</p>
+                <div class="dropdown-divider"></div>
+                <p class="lead text-center" style="color: var(--main-color);">الجيزة</p>
+                <p class="lead text-center text-muted">7 احمد عرابي - المهندسين</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact -->
+
+
+
+        <!-- Map -->
+        <h3 class="text-center display-4">أبحث عنا في خرائط جوجل</h3>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6906.152971990154!2d31.208673!3d30.063341999999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584118647d44ef%3A0xdd621fef92a8fcc8!2s7%20Ahmed%20Oraby%2C%20Madinet%20Al%20Eelam%2C%20Agouza%2C%20Giza%20Governorate%2C%20Egypt!5e0!3m2!1sen!2sus!4v1623581965867!5m2!1sen!2sus"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+
+
+
+
+<!-- Start Footer -->
+<div class="main-footer text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-6">
+                <p class="lead text-right">&copy; 2021 Lod Hollywood</p>
+            </div>
+            <div class="col-sm-4 col-6">
+                <ul class="socialmedia">
+                    <li><a href="https://www.facebook.com/LodHolly" target="_blank"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/lodhollywood/" target="_blank"><i
+                                class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/lodhollywood" target="_blank"><i class="fa fa-twitter"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Footer -->
+
+
+    <!-- Javascript -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>
